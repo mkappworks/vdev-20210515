@@ -11,12 +11,25 @@ git commit -m "Empty project with README"
 git remote add origin https://github.com/mkappworks/vdev-20210515.git
 
 (5)Using the terminal, push the commits in your local repo to the remote repo on GitHub. What is the command used?
+git branch -M main
 git push -u origin main
 
 (6) How Node.js works?
+
+
 (7) What is meant by the term “web platform”?
+
+
 (8) How TypeScript works?
+
+
 (9) How WebAssembly works?
+
+
 (10) How is the Fastify different from frameworks like Express.js?
+
+
 (11) How is TailwindCSS different from frameworks like Bootstrap?
+
+
 (12) How is Vite.js different from tools like “Create React App”?
