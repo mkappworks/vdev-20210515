@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <div className="flex items-center justify-between">
-      <div className="text-lg leading-6 font-medium text-black">Movies</div>
+      <div className="text-lg font-semibold text-black mb-0.5">Movies</div>
       <form className="relative">
         <svg
           width="20"
@@ -18,7 +18,7 @@ const Header = () => {
           />
         </svg>
         <input
-          className="focus:border-light-blue-500 focus:ring-1 focus:ring-light-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10"
+          className="focus:border-light-blue-500 focus:ring-1 focus:ring-blue-500 focus:outline-none w-full text-sm text-black placeholder-gray-500 border border-gray-200 rounded-md py-2 pl-10"
           type="text"
           aria-label="LookUp a Movie"
           placeholder="LookUp a Movie"
