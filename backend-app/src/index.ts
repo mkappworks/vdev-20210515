@@ -1,10 +1,13 @@
 import Fastify, { FastifyInstance } from "fastify";
 
 import infoRoute from "./routes/InfoRoute";
+import moviesRoute from "./routes/MoviesRoute";
 
 const server: FastifyInstance = Fastify({});
 
 server.register(infoRoute, { prefix: "/api" });
+
+server.register(moviesRoute, { prefix: "/api" });
 
 const start = async () => {
   try {
