@@ -5,6 +5,8 @@ import moviesRoute from "./routes/MoviesRoute";
 
 const server: FastifyInstance = Fastify({});
 
+server.register(require("fastify-cors"));
+
 server.register(infoRoute, { prefix: "/api" });
 
 server.register(moviesRoute, { prefix: "/api" });
