@@ -1,6 +1,6 @@
 import { FastifyPluginAsync } from "fastify";
 
-const moviesData = [
+const moviesData: unknown = [
   {
     id: 1,
     name: "Inception",
