@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 import useStore from "./store/store";
 
@@ -7,20 +7,20 @@ import MovieItemList from "./components/MovieItemList";
 import MovieCounter from "./components/MovieCounter";
 
 const App = () => {
-  const fetchMovies = useStore((state) => state.fetchMovies);
+  const fetchMoviesHandler = useStore((state) => state.fetchDatabaseMovies);
 
   useEffect(() => {
-    fetchMovies("http://localhost:3000/api/movies");
+    fetchMoviesHandler("http://localhost:3000/api/movies");
   }, []);
 
-  const movies = useStore((state) => state.movies);
+  const filteredMoviesList = useStore((state) => state.filteredMovies);
 
-  const movieCount = movies.length;
+  const movieCount = filteredMoviesList.length;
 
   let movieTable = <p>Found no Movies!</p>;
 
-  if (movies.length > 0) {
-    movieTable = <MovieItemList movies={movies}></MovieItemList>;
+  if (filteredMoviesList.length > 0) {
+    movieTable = <MovieItemList movies={filteredMoviesList}></MovieItemList>;
   }
 
   return (
