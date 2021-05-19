@@ -2,8 +2,8 @@ import create from "zustand";
 import { combine } from "zustand/middleware";
 
 const useStore = create(
-  combine({ movies: [] }, (set) => ({
-    fetchMovies: async (movieUrl: RequestInfo) => {
+  combine({ fetchedMovies: [], filteredMovies: [] }, (set) => ({
+    fetchDatabaseMovies: async (movieUrl: RequestInfo) => {
       const response = await fetch(movieUrl);
 
       if (!response.ok) {
@@ -11,7 +11,7 @@ const useStore = create(
       }
 
       const data = await response.json();
-      
+
       const transformedMovies = data.map(
         (movieData: {
           id: number;
@@ -28,7 +28,33 @@ const useStore = create(
         }
       );
 
-      set(() => ({ movies: transformedMovies }));
+      set(() => ({
+        fetchedMovies: transformedMovies,
+        filteredMovies: transformedMovies,
+      }));
+    },
+    setFilteredMovies: (searchTerm: string, fetchedMovies: any) => {
+      const tempFetchedMoviesList = fetchedMovies;
+      const formattedSearchTerm = searchTerm.replace(/\s+/g, "").toLowerCase();
+
+      if (searchTerm !== "") {
+        const filteredMoviesList = tempFetchedMoviesList.filter(
+          (movie: any) => {
+            return movie.title
+              .replace(/\s+/g, "")
+              .toLowerCase()
+              .includes(formattedSearchTerm);
+          }
+        );
+
+        set(() => ({
+          filteredMovies: filteredMoviesList,
+        }));
+      } else {
+        set(() => ({
+          filteredMovies: tempFetchedMoviesList,
+        }));
+      }
     },
   }))
 );
