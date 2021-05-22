@@ -16,9 +16,9 @@
     ipaddr.js "^2.0.0"
 
 "@types/node@^15.3.0":
-  version "15.3.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.3.0.tgz#d6fed7d6bc6854306da3dea1af9f874b00783e26"
-  integrity sha512-8/bnjSZD86ZfpBsDlCIkNXIvm+h6wi9g7IqL+kmFkQ+Wvu3JrasgLElfiPgoo8V8vVfnEi0QVS12gbl94h9YsQ==
+  version "15.3.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.3.1.tgz#23a06b87eedb524016616e886b116b8fdcb180af"
+  integrity sha512-weaeiP4UF4XgF++3rpQhpIJWsCTS4QJw5gvBhQu6cFIxTwyxWIe3xbnrY/o2lTCQ0lsdb8YIUDUvLR4Vuz5rbw==
 
 abstract-logging@^2.0.0:
   version "2.0.1"
@@ -88,9 +88,9 @@ fast-json-stable-stringify@^2.0.0:
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
 
 fast-json-stringify@^2.5.2:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/fast-json-stringify/-/fast-json-stringify-2.7.3.tgz#02145e3a821d6ce1d8a8bfb919d5cbe96cdcd693"
-  integrity sha512-QNIh4CQ5S3D5vO7Bv88Si8TFQGZgxv15h2n/79TESr4lhZ8ptq3R9SCTteslr+pwrZQlvrAFgcXgFuUIgS3UQA==
+  version "2.7.4"
+  resolved "https://registry.yarnpkg.com/fast-json-stringify/-/fast-json-stringify-2.7.4.tgz#80a828d3739dd9f038ef010b75558cd494f93745"
+  integrity sha512-fc2bvaF7C6fa+Q/8D9SbjJC70F/PueIR9gaZPr/85WLjJjpUbwszm7vvK7fu+c/W6sCCeeEOMs+ry8/LV6xBPg==
   dependencies:
     ajv "^6.11.0"
     deepmerge "^4.2.2"
